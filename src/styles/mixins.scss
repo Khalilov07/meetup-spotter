@@ -1,0 +1,15 @@
+@mixin flex() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin center () {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+// mixin - нужны для быстрого написания css кода, то ест мы создаем функцию и прописываем нужные css свойства
+// далее получаем их с помощью @include и название mixin

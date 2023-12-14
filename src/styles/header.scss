@@ -1,0 +1,50 @@
+.header {
+  z-index: 2;
+}
+
+header {
+  display: grid;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr max-content 1fr;
+}
+
+.socials {
+  @include flex;
+  column-gap: 10px;
+  justify-content: flex-end;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: $light;
+    transition: fill 0.25s ease;
+  }
+
+  &-item {
+    &:hover {
+      svg {
+        fill: $action;
+      }
+    }
+  }
+}
+
+.menu {
+  @include flex;
+  column-gap: 16px;
+  &-item {
+    a {
+      color: $light;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+      &:hover {
+        color: $action;
+      }
+    }
+  }
+}
+ 
