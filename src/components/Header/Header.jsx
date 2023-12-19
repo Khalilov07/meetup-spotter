@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../Logo/Logo";
 import Socials from "../Socials/Socials";
 
-import { MENU } from "../../utils/contstans";
+import { MENU } from "../../utils/constants";
 import { Link } from "react-router-dom";
 
 import ScrollAnimation from "react-animate-on-scroll";

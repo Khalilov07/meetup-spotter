@@ -1,3 +1,5 @@
+export const MAIN_URL = `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}`;
+
 export const MENU = [
   {
     name: "Концерты",

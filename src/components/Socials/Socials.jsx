@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SOCIALS } from "../../utils/contstans";
+import { SOCIALS } from "../../utils/constants";
 
 import Icon from "../Icon/Icon";
 

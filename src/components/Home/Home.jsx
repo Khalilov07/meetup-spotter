@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TourItems from '../Tour/TourItmes'
+import TourItems from '../Tour/TourItems'
 import MainBanner from './MainBanner';
 
 const Home = () => {
