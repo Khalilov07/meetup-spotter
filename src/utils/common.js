@@ -5,8 +5,8 @@ export const request = async (query) => {
     const result = await fetch(MAIN_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ query }),
     });
@@ -20,3 +20,6 @@ export const request = async (query) => {
   }
 };
 
+export const sortByDate = (arr) => {
+  return arr.sort((a, b) => new Date(a.date) - new Date(b.date));
+};

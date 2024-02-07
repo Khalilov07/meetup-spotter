@@ -8,39 +8,37 @@ const initialState = {
   isLoading: false,
 };
 
-export const getTourItems = createAsyncThunk(
-  "tourItems/getTourItems",
+export const getTrackItems = createAsyncThunk(
+  "trackReducer/getTrackItems",
   async (_, thunkApi) => {
     try {
       const data = await request(tourItemCollectionQuery);
 
-      const { items } = data.tourItemCollection;
+      const { items } = data.productCollection;
 
-      console.log(items);
-
-      return items
+      return items;
     } catch (err) {
       return thunkApi.rejectWithValue(err);
     }
   }
 );
 
-const tourItemsSlice = createSlice({
-  name: "tourItems",
+const trackItemsSlice = createSlice({
+  name: "tracksReducer",
   initialState,
   extraReducers: (builder) => {
     builder
-      .addCase(getTourItems.pending, (state) => {
+      .addCase(getTrackItems.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getTourItems.fulfilled, (state, { payload }) => {
+      .addCase(getTrackItems.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.items = payload; // Change this line
       })
-      .addCase(getTourItems.rejected, (state) => {
+      .addCase(getTrackItems.rejected, (state) => {
         state.isLoading = false;
       });
   },
 });
 
-export default tourItemsSlice.reducer;
+export default trackItemsSlice.reducer;
