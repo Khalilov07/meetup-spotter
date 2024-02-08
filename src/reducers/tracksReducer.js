@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import { request } from "../utils/common";
-import { tourItemCollectionQuery } from "../utils/queries";
+import { trackItemCollectionQuery } from "../utils/queries";
 
 const initialState = {
   items: [],
@@ -12,9 +12,9 @@ export const getTrackItems = createAsyncThunk(
   "trackReducer/getTrackItems",
   async (_, thunkApi) => {
     try {
-      const data = await request(tourItemCollectionQuery);
+      const data = await request(trackItemCollectionQuery);
 
-      const { items } = data.productCollection;
+      const { items } = data.trackCollection;
 
       return items;
     } catch (err) {

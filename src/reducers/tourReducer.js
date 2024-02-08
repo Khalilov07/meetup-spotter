@@ -16,8 +16,6 @@ export const getTourItems = createAsyncThunk(
 
       const { items } = data.tourItemCollection;
 
-      console.log(items);
-
       return items
     } catch (err) {
       return thunkApi.rejectWithValue(err);

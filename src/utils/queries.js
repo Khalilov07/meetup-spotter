@@ -19,17 +19,19 @@ export const tourItemCollectionQuery = `
 
 export const trackItemCollectionQuery = `
   {
-    productCollection {
+    trackCollection {
       items {
-        date
-        city 
-        soldOut
-        country
-        ticketLink
-        videoLink
         sys {
           id
         }
+        date
+        title
+        link {
+          url
+        }
+        cover {
+          url
+        } 
       }
     }
   }

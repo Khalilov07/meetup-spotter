@@ -15,8 +15,6 @@ const TourItems = () => {
 
   const { items = [], isLoading } = useSelector(({ tour }) => tour);
 
-  console.log(items);
-
   useEffect(() => {
     dispatch(getTourItems());
   }, [dispatch]);
