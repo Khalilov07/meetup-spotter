@@ -1,0 +1,23 @@
+.audios {
+    padding: 16px 0;
+    margin-top: 20px;
+
+    &-section {
+        padding: 50px 0;
+    }
+
+
+
+}
+
+
+.audio {
+    gap: 16px;
+    display: grid;
+    cursor: pointer;
+    width: max-content;
+    position: relative;
+    text-transform: uppercase;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "image date" "title .";
+}

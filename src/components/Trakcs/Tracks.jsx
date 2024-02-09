@@ -20,22 +20,34 @@ const Tracks = () => {
     console.log(items);
 
     return (
-        <Section className="tracks-section">
+        <Section className="audio-section">
             <div className="container">
                 <SectionTitle text="Записи" />
 
                 {isLoading ? "Loading" : (
-                    items.filter((_, i) => i < 3).map(({ cover, title, sys: { id }, link }) => {
-                        <ScrollAnimation key={id} className='tracks-item' animateIn='inLeft' animateOut='fadeOutRight'>
-                            <div className="track">
-                                <div className="track">
-                                    <img src={cover.url} alt={title} />
-                                    <Icon name="pause" />
-                                </div>
-                                <p className="track-date">{ }</p>
-                            </div>
-                        </ScrollAnimation>
-                    })
+                    <div className='audios'>
+                        {
+                            items
+                                .filter((_, i) => i < 3)
+                                .map(({ cover, date, title, sys: { id }, link }) => {
+                                    <ScrollAnimation
+                                        key={id}
+                                        className='audio-item'
+                                        animateIn='fadeInLeft'
+                                        animateOut='fadeOutRight'>
+                                        <div className="audio">
+                                            <div className="audio-image">
+                                                <img src="https://images.ctfassets.net/c5o9iwnucbsp/6zA3mg8K…b184b61fdfe5ab72e/webcam-2_9_2024__6_16_26_PM.png" alt={title} />
+                                                <Icon name="pause" />
+                                            </div>
+                                            <p className="audio-date">{date}</p>
+                                            <p className="audio-title">{title}</p>
+                                        </div>
+                                    </ScrollAnimation>
+                                })
+
+                        }
+                    </div>
                 )}
 
             </div>

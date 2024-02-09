@@ -2,6 +2,7 @@ import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import Icon from "../Icon/Icon";
+import { getLocalDateString } from "../../utils/common";
 
 const TourItem = ({ place, date, city, ticketLink, videoLink, soldOut, i }) => {
   return (
@@ -15,11 +16,7 @@ const TourItem = ({ place, date, city, ticketLink, videoLink, soldOut, i }) => {
       >
         <div className="tour-item__info">
           <div className="tour-item__date">
-            {new Date(date).toLocaleDateString("ru-RU", {
-              month: "numeric",
-              day: "numeric",
-              year: "numeric",
-            })}
+            {getLocalDateString(date, {})}
             <p className="tour-item__place">{place}</p>
           </div>
         </div>
