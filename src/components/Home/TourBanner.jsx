@@ -2,7 +2,7 @@ import React from "react";
 
 import Section from "../Section/Section";
 
-import video from "../../images/oxxxytour.mp4";
+import video from "../../images/luhaidan.mp4";
 
 const TourBanner = () => {
   return (

@@ -3,7 +3,7 @@ import React from "react";
 import TourItems from "../Tour/TourItems";
 import MainBanner from "./MainBanner";
 import TourBanner from "./TourBanner";
-import Tracks from "../Trakcs/Tracks";
+import Tracks from "../Trakcs/Trakcs";
 
 const Home = () => {
   return (
